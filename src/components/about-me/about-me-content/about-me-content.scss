@@ -14,14 +14,20 @@
   }
 
   a {
-    color: darkgray !important;
+    color: #c2185b !important;
   }
 
   ul {
     margin-left: 0;
     padding-left: 0;
+
     li {
       list-style-type: none;
     }
+
+    .contact {
+      color: #c2185b;
+    }
   }
 }
+
