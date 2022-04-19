@@ -3,13 +3,25 @@
   text-align: center;
 
   img {
-    max-width: 150px;
-    max-width: 150px;
+    max-width: 130px;
+    max-width: 130px;
   }
 
   .img-block {
-    max-width: 200px;
-    max-width: 200px;
+    max-width: 180px;
+    max-width: 1800px;
     margin: auto;
+  }
+
+  a {
+    color: darkgray !important;
+  }
+
+  ul {
+    margin-left: 0;
+    padding-left: 0;
+    li {
+      list-style-type: none;
+    }
   }
 }
