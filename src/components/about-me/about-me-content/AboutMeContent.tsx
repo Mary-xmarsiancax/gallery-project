@@ -9,7 +9,7 @@ import monogramm from "../../../img/monogramm.png"
 
 const AboutMeContent: React.FC = (): React.ReactElement => {
     return (
-        <Container className={"about-me-content"}>
+        <Container className={"about-me-content-wr"}>
             <Container fluid>
                    <Container>
                        <Row>

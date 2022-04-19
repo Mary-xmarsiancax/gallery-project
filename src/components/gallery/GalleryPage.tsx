@@ -1,17 +1,15 @@
 import React from "react";
 import GalleryContent from "./gallery-content/GalleryContent";
-import Header from "../header/Header";
-import Preloader from "../preloader/Preloader";
+import {Container} from "react-bootstrap";
+import "./gallery.scss"
 
-type GalleryProps = {
-    label: string
-}
 
-const Gallery: React.FC<GalleryProps> = (props): React.ReactElement => {
+const Gallery: React.FC = (props): React.ReactElement => {
     return (
-        <div>
-            <Header label={props.label}/>
-            <GalleryContent/>
+        <div className={"gallery-wr"}>
+            <Container fluid className={"gallery-container"}>
+                <GalleryContent/>
+            </Container>
             {/*<Preloader/>*/}
         </div>
 

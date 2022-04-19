@@ -1,18 +1,29 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import {Container, Nav, Navbar, Offcanvas} from "react-bootstrap";
 import avatar from "../../img/avatar.jpg";
 import "./Header.scss";
+import {useLocation} from "react-router-dom";
 
-type GalleryHeaderProps = {
-    label: string
-}
-const Header: React.FC<GalleryHeaderProps> = (props): React.ReactElement => {
+
+const Header: React.FC = (props): React.ReactElement => {
+    const location = useLocation()
+    const [label, setLabel] = useState("ГАЛЕРЕЯ")
+    useEffect(() => {
+        if (location.pathname.startsWith("/imgInfo")) {
+            setLabel("КАРТИНКА")
+        } else if (location.pathname.startsWith("/aboutMe")) {
+            setLabel("ОБО МНЕ")
+        } else {
+            setLabel("ГАЛЕРЕЯ")
+        }
+    }, [location.pathname])
+
     return (
         <div className={"Header"}>
             <Navbar className={"navbar"} expand={false}>
                 <Container fluid>
-                    <Navbar.Brand href="#">{props.label}</Navbar.Brand>
-                    <Navbar.Toggle aria-controls="offcanvasNavbar" />
+                    <Navbar.Brand href="#">{label}</Navbar.Brand>
+                    <Navbar.Toggle aria-controls="offcanvasNavbar"/>
                     <Navbar.Offcanvas
                         id="offcanvasNavbar"
                         aria-labelledby="offcanvasNavbarLabel"
