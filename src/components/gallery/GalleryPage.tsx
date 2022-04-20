@@ -13,7 +13,6 @@ const Gallery: React.FC = (props): React.ReactElement => {
         imgApi()
             .then(resp => {
                 dispatch(actions.setImg(resp.data))
-                console.log(resp.data);
             });
     }, [])
 

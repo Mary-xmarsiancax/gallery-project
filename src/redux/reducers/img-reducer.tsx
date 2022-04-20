@@ -34,7 +34,6 @@ const imagesReducer = (state = initialState, action: ImgActionsType) => {
                 return acc
             }, [[], [], [], []] as any)
             copyState.images = copyImages
-            console.log("copyState",copyState);
             return copyState
         }
 
