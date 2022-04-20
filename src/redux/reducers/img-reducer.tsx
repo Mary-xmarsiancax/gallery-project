@@ -8,11 +8,11 @@ export const actions = {
 
 type ImgActionsType = InferActionsTypes<typeof actions>
 type Selected = { selectedId: number | null }
-type Img = { images: Array<Images> }
+type Img = { images: Array<Array<Images>> }
 type ImgState = Img & Selected
 
 const initialState: ImgState = {
-    images: [],
+    images: [[], [], [], []],
     selectedId: null
 }
 
@@ -21,11 +21,22 @@ const imagesReducer = (state = initialState, action: ImgActionsType) => {
         case "SET_IMG": {
             let copyState = {...state}
             let copyImages = [...copyState.images]
-            copyImages = action.images
+            copyImages = action.images.reduce((acc, curr, index) => {
+                if (index < 6) {
+                    acc[0].push(curr)
+                } else if (index < 12) {
+                    acc[1].push(curr)
+                } else if (index < 18) {
+                    acc[2].push(curr)
+                } else {
+                    acc[3].push(curr)
+                }
+                return acc
+            }, [[], [], [], []] as any)
             copyState.images = copyImages
+            console.log("copyState",copyState);
             return copyState
         }
-
 
         default:
             return state;
