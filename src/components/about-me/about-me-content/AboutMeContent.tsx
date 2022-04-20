@@ -17,8 +17,8 @@ const AboutMeContent: React.FC = (): React.ReactElement => {
                                <img src={monogramm} alt="monogramm"/>арочкина Мария Владимировна.
                            </Col>
                        </Row>
-                       <Row>
-                           <Col md={{ span: 7, offset: 1 }}>
+                       <Row className={"main-info-about-me"}>
+                           <Col md={{ span: 7, offset: 1 }} >
                                <ul>
                                <li>Мне 34 года</li>
                                <li>По специальности Логист</li>

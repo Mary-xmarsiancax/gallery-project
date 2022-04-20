@@ -6,7 +6,7 @@ export const actions = {
     setSelectedId: (id: number) => ({type: "SET_SELECTED_ID", id} as const)
 }
 
-type ImgActionsType = InferActionsTypes<typeof actions>
+export type ImgActionsType = InferActionsTypes<typeof actions>
 type Selected = { selectedId: number | null }
 type Img = { images: Array<Array<Images>> }
 type ImgState = Img & Selected
