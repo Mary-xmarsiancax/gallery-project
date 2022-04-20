@@ -3,6 +3,7 @@ import {Container, Nav, Navbar, Offcanvas} from "react-bootstrap";
 import avatar from "../../img/avatar.jpg";
 import "./Header.scss";
 import {useLocation} from "react-router-dom";
+import {imgApi} from "../../services/Api";
 
 
 const Header: React.FC = (props): React.ReactElement => {
