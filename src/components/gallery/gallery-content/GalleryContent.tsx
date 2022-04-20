@@ -18,9 +18,7 @@ const GalleryContent: React.FC = (): React.ReactElement => {
             return (
                 <Container fluid className={"gallery-content"} key={index}>
                     <Container>
-                        {index===0?<b>Картинки с природой</b>:(index===1)?<b>Картинки с людьми</b>:(index===2)?
-                            <b>Картинки с животными</b>:<b>Картинки с мотоциклами</b>
-                        }
+                        <b>Категория {index+1}</b>
                         <Container>
                             <Row>
                                 {img}

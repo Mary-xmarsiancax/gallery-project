@@ -12,7 +12,7 @@ type Img = { images: Array<Array<Images>> }
 type ImgState = Img & Selected
 
 const initialState: ImgState = {
-    images: [[], [], [], []],
+    images: [],
     selectedId: null
 }
 
@@ -21,18 +21,13 @@ const imagesReducer = (state = initialState, action: ImgActionsType) => {
         case "SET_IMG": {
             let copyState = {...state}
             let copyImages = [...copyState.images]
-            copyImages = action.images.reduce((acc, curr, index) => {
-                if (index < 6) {
-                    acc[0].push(curr)
-                } else if (index < 12) {
-                    acc[1].push(curr)
-                } else if (index < 18) {
-                    acc[2].push(curr)
-                } else {
-                    acc[3].push(curr)
+            copyImages = action.images.reduce((acc:Array<Array<Images>>, curr) => {
+                if(acc.length===0 || acc[acc.length-1].length===6){
+                    acc.push([])
                 }
+                acc[acc.length-1].push(curr)
                 return acc
-            }, [[], [], [], []] as any)
+            }, [])
             copyState.images = copyImages
             return copyState
         }
