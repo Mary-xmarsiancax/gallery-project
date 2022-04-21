@@ -21,7 +21,7 @@ function App() {
             <Routes>
                 <Route path="/" element={ <Gallery/>}/>
                 <Route path="/aboutMe" element={ <AboutMe/> }/>
-                <Route path="/imgInfo" element={ <ImgInfo/> }/>
+                <Route path="/imgInfo/:id" element={ <ImgInfo/> }/>
             </Routes>
             {isLoading ?
                 <Preloader/>
