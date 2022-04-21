@@ -1,22 +1,19 @@
-import React, {useEffect} from "react";
+import React, {useEffect, useLayoutEffect} from "react";
 import GalleryContent from "./gallery-content/GalleryContent";
 import {Container} from "react-bootstrap";
 import "./gallery.scss"
-import {useDispatch} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
+import {AppState} from "../../redux/store";
+import {Images} from "../../services/api-types";
 
 
 const Gallery: React.FC = (props): React.ReactElement => {
-    const dispatch = useDispatch()
-    useEffect(() => {
-        dispatch({type: "FETCH_IMAGES"});
-    }, [])
 
     return (
         <div className={"gallery-wr"}>
             <Container fluid className={"gallery-container"}>
                 <GalleryContent/>
             </Container>
-            {/*<Preloader/>*/}
         </div>
 
     )

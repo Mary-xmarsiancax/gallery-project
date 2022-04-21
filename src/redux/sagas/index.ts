@@ -7,7 +7,7 @@ import {Images} from "../../services/api-types";
 export function* fetchImg(): any {
     try {
         yield put(actions.setLoading(true));
-        yield delay(2000);
+        yield delay(500);
         const images: AxiosResponse<Array<Images>> = yield call(getImages)
         yield put(actions.setLoading(false));
         yield put(actions.setImg(images.data));
@@ -17,7 +17,7 @@ export function* fetchImg(): any {
 }
 
 function* watchFetchImg() {
-    yield takeEvery('FETCH_IMAGES', fetchImg)
+    yield takeEvery("FETCH_IMAGES", fetchImg)
 }
 
 export function* mySaga() {

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useLayoutEffect} from 'react';
 import Gallery from "./components/gallery/GalleryPage";
 import AboutMe from "./components/about-me/AboutMePage";
 import ImgInfo from "./components/img-info/ImgInfoPage";
@@ -6,11 +6,15 @@ import {Route, Routes } from 'react-router-dom';
 import "./App.scss";
 import Header from "./components/header/Header";
 import Preloader from "./components/preloader/Preloader";
-import {useSelector} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
 import {AppState} from "./redux/store";
 
 function App() {
     const isLoading = useSelector<AppState>((state) => state.isLoading)as string;
+    const dispatch = useDispatch()
+    useLayoutEffect(() => {
+        dispatch({type: "FETCH_IMAGES"});
+    }, [])
     return (
         <div>
             <Header/>
