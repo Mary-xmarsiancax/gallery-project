@@ -10,7 +10,7 @@ import {useDispatch, useSelector} from "react-redux";
 import {AppState} from "./redux/store";
 
 function App() {
-    const isLoading = useSelector<AppState>((state) => state.isLoading)as string;
+    const isLoading = useSelector<AppState>((state) => state.isLoading)as boolean;
     const dispatch = useDispatch()
     useLayoutEffect(() => {
         dispatch({type: "FETCH_IMAGES"});

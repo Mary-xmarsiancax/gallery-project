@@ -3,19 +3,22 @@ import {Images} from "../../services/api-types";
 
 export const actions = {
     setImg: (images: Array<Images>) => ({type: "SET_IMG", images} as const),
-    setLoading: (loadingStatus: boolean) => ({type: "SET_LOADING", loadingStatus} as const)
+    setLoading: (loadingStatus: boolean) => ({type: "SET_LOADING", loadingStatus} as const),
+    setSelectedId: (id: number) => ({type: "SET_SELECTED_ID", id} as const)
 }
 
 export type ImgActionsType = InferActionsTypes<typeof actions>
 type IsLoading = {
     isLoading: boolean
 }
+type Selected = { selectedId: number | null }
 type Img = { images: Array<Array<Images>> }
-type ImgState = Img & IsLoading
+type ImgState = Img & IsLoading & Selected
 
 const initialState: ImgState = {
     images: [],
-    isLoading: false
+    isLoading: false,
+    selectedId: null
 }
 
 const imagesReducer = (state = initialState, action: ImgActionsType) => {
@@ -36,6 +39,11 @@ const imagesReducer = (state = initialState, action: ImgActionsType) => {
         case "SET_LOADING": {
             let copyState = {...state}
             copyState.isLoading = action.loadingStatus;
+            return copyState
+        }
+        case "SET_SELECTED_ID": {
+            let copyState = {...state}
+            copyState.selectedId = action.id
             return copyState
         }
 
