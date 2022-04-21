@@ -2,11 +2,10 @@ import React, {useState} from "react";
 import {Button, Container, Modal} from "react-bootstrap";
 import books from "../../img/books.png";
 import "./img-info.scss"
+import {NavLink} from "react-router-dom";
 
 const ImgInfo: React.FC = (): React.ReactElement => {
-    const handleToBack = () => {
 
-    }
     return (
         <div className={"modal-wr"}>
             <Container fluid className={"modal-container"}>
@@ -23,17 +22,14 @@ const ImgInfo: React.FC = (): React.ReactElement => {
                                 <p>url:""</p>
                             </figcaption>
                         </figure>
-
                     </Modal.Body>
-
                     <Modal.Footer>
-                        <Button variant="primary" onClick={handleToBack}>Назад</Button>
+                        <NavLink to="/"><Button variant="primary" >Назад</Button>
+                        </NavLink>
                     </Modal.Footer>
                 </Modal.Dialog>
             </Container>
         </div>
-
-
     )
 }
 export default ImgInfo
