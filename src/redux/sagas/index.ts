@@ -6,7 +6,10 @@ import {Images} from "../../services/api-types";
 
 export function* fetchImg(): any {
     try {
-        const images: AxiosResponse<Array<Images>> = yield call(getImages);
+        yield put(actions.setLoading(true));
+        // setTimeout(()=>{},500)
+        const images: AxiosResponse<Array<Images>> = yield call(getImages)
+        yield put(actions.setLoading(false));
         yield put(actions.setImg(images.data));
     } catch (e) {
         yield put(actions.setImg([]));
