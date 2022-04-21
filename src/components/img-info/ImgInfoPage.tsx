@@ -9,7 +9,6 @@ import {Images} from "../../services/api-types";
 
 const ImgInfo: React.FC = (): React.ReactElement => {
     let {id} = useParams()
-    console.log("params", id);
     const images = useSelector<AppState>((state) => state.images) as Array<Array<Images>>;
     const selectedObj = images.flat().find(obj => obj.id.toString() === id)
 
