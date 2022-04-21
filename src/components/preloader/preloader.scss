@@ -4,12 +4,15 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(0, 0, 0, .5)
+  background-color: rgba(0, 0, 0, .5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .spinner {
+    min-width: 10vw;
+    min-height: 10vw;
+  }
 }
 
-.preloader img{
-  position: relative;
-  top: -120px;
-  margin: 350px 0 0 650px;
 
-}
