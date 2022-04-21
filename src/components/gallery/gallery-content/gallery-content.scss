@@ -1,4 +1,27 @@
 .gallery-content-wr {
   background-color: rgb(250, 250, 250);
   text-align: center;
+
+  .img-wr {
+    position: relative;
+  }
+
+  .img-wr {
+    display: flex;
+    justify-content: center;
+  }
+
+  .gallery-content {
+    .img-wr Button {
+      display: none;
+    }
+
+  }
+
+  .img-wr:hover Button {
+    display: block;
+    position: absolute;
+    width: 72%;
+    margin: auto;
+  }
 }
