@@ -2,7 +2,7 @@ import React, {useLayoutEffect} from 'react';
 import Gallery from "./components/gallery/GalleryPage";
 import AboutMe from "./components/about-me/AboutMePage";
 import ImgInfo from "./components/img-info/ImgInfoPage";
-import {Route, Routes } from 'react-router-dom';
+import {Route, Routes} from 'react-router-dom';
 import "./App.scss";
 import Header from "./components/header/Header";
 import Preloader from "./components/preloader/Preloader";
@@ -20,6 +20,7 @@ function App() {
             <Header/>
             <Routes>
                 <Route path="/" element={ <Gallery/>}/>
+                <Route path="/gallery-project" element={ <Gallery/>}/>
                 <Route path="/aboutMe" element={ <AboutMe/> }/>
                 <Route path="/imgInfo/:id" element={ <ImgInfo/> }/>
             </Routes>

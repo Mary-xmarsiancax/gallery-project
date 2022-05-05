@@ -31,7 +31,7 @@ const ImgInfo: React.FC = (): React.ReactElement => {
                         </figure>
                     </Modal.Body>
                     <Modal.Footer>
-                        <NavLink to="/"><Button variant="primary">Назад</Button>
+                        <NavLink to="/gallery-project"><Button variant="primary">Назад</Button>
                         </NavLink>
                     </Modal.Footer>
                 </Modal.Dialog>
