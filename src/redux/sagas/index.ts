@@ -10,7 +10,6 @@ export function* fetchImg(): any {
         yield delay(500);
         const images: AxiosResponse<Array<Images>> = yield call(getImages)
         yield put(actions.setImg(images.data));
-        console.log("картинки засетались");
         yield put(actions.setLoading(false));
     } catch (e) {
         yield put(actions.setImg([]));
