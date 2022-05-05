@@ -15,7 +15,7 @@ const GalleryContent: React.FC = (): React.ReactElement => {
                     <Col key={img.id} xs={6} md={4} lg={2} className={"img-wr"}>
                         <NavLink to={"/imgInfo/"+img.id}><Button variant="info">Подробнее</Button>
                         </NavLink>
-                        <img src={img.thumbnailUrl} alt="img1"/>
+                        <img src={img.thumbnailUrl} alt={`img${img.id}`}/>
                     </Col>
                 )
             })

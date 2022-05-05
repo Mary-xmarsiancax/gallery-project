@@ -21,7 +21,7 @@ const ImgInfo: React.FC = (): React.ReactElement => {
                     </Modal.Header>
                     <Modal.Body>
                         <figure className={"modal-img-block"}>
-                            <img src={selectedObj.thumbnailUrl} alt="books"/>
+                            <img src={selectedObj.thumbnailUrl} alt={selectedObj.title}/>
                             <figcaption>
                                 <p>title:"{selectedObj.title}"</p>
                                 <p>id:"{selectedObj.id}"</p>
