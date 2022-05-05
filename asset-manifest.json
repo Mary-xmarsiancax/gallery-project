@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/static/css/main.4da5e43d.css",
-    "main.js": "/static/js/main.5f1ef0bc.js",
-    "static/js/787.aebb17a2.chunk.js": "/static/js/787.aebb17a2.chunk.js",
-    "static/media/monogramm.png": "/static/media/monogramm.8f91a9265b3b6fccd9a9.png",
-    "static/media/books.png": "/static/media/books.0a70f38e91add84d686e.png",
-    "static/media/volleyball.png": "/static/media/volleyball.9e4f5c920175e04bb254.png",
-    "static/media/avatar.jpg": "/static/media/avatar.11938c29434ee56e910e.jpg",
-    "static/media/bikeLogo.png": "/static/media/bikeLogo.5a92674f934243bcba64.png",
-    "index.html": "/index.html",
-    "main.4da5e43d.css.map": "/static/css/main.4da5e43d.css.map",
-    "main.5f1ef0bc.js.map": "/static/js/main.5f1ef0bc.js.map",
-    "787.aebb17a2.chunk.js.map": "/static/js/787.aebb17a2.chunk.js.map"
+    "main.css": "/gallery-project/static/css/main.4da5e43d.css",
+    "main.js": "/gallery-project/static/js/main.79b744d0.js",
+    "static/js/787.aebb17a2.chunk.js": "/gallery-project/static/js/787.aebb17a2.chunk.js",
+    "static/media/monogramm.png": "/gallery-project/static/media/monogramm.8f91a9265b3b6fccd9a9.png",
+    "static/media/books.png": "/gallery-project/static/media/books.0a70f38e91add84d686e.png",
+    "static/media/volleyball.png": "/gallery-project/static/media/volleyball.9e4f5c920175e04bb254.png",
+    "static/media/avatar.jpg": "/gallery-project/static/media/avatar.11938c29434ee56e910e.jpg",
+    "static/media/bikeLogo.png": "/gallery-project/static/media/bikeLogo.5a92674f934243bcba64.png",
+    "index.html": "/gallery-project/index.html",
+    "main.4da5e43d.css.map": "/gallery-project/static/css/main.4da5e43d.css.map",
+    "main.79b744d0.js.map": "/gallery-project/static/js/main.79b744d0.js.map",
+    "787.aebb17a2.chunk.js.map": "/gallery-project/static/js/787.aebb17a2.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.4da5e43d.css",
-    "static/js/main.5f1ef0bc.js"
+    "static/js/main.79b744d0.js"
   ]
 }
