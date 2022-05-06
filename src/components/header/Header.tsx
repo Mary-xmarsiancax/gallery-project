@@ -10,7 +10,7 @@ const Header: React.FC = (props): React.ReactElement => {
     useEffect(() => {
         if (location.pathname.startsWith("/imgInfo")) {
             setLabel("КАРТИНКА")
-        } else if (location.pathname.startsWith("/aboutMe")) {
+        } else if (location.pathname.startsWith("/AboutMe")) {
             setLabel("ОБО МНЕ")
         } else {
             setLabel("ГАЛЕРЕЯ")

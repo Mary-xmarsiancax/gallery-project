@@ -21,7 +21,7 @@ function App() {
             <Routes>
                 <Route path="/" element={ <Gallery/>}/>
                 <Route path="/gallery-project" element={ <Gallery/>}/>
-                <Route path="/aboutMe" element={ <AboutMe/> }/>
+                <Route path="/AboutMe" element={ <AboutMe/> }/>
                 <Route path="/imgInfo/:id" element={ <ImgInfo/> }/>
             </Routes>
             {isLoading ?
