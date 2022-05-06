@@ -19,10 +19,10 @@ function App() {
         <div>
             <Header/>
             <Routes>
-                <Route path="/" element={ <Gallery/>}/>
-                <Route path="/gallery-project" element={ <Gallery/>}/>
-                <Route path="/AboutMe" element={ <AboutMe/> }/>
+                {/*<Route path="/gallery-project" element={ <Gallery/>}/>*/}
+                <Route path="/aboutMe" element={ <AboutMe/> }/>
                 <Route path="/imgInfo/:id" element={ <ImgInfo/> }/>
+                <Route path="/" element={ <Gallery/>}/>
             </Routes>
             {isLoading ?
                 <Preloader/>
