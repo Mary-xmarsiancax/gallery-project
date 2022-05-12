@@ -6,11 +6,9 @@ import {Route, Routes} from 'react-router-dom';
 import "./App.scss";
 import Header from "./components/header/Header";
 import Preloader from "./components/preloader/Preloader";
-import {useDispatch, useSelector} from "react-redux";
-import {AppState} from "./redux/store";
+import {useDispatch} from "react-redux";
 
 function App() {
-    const isLoading = useSelector<AppState>((state) => state.isLoading)as boolean;
     const dispatch = useDispatch()
     useLayoutEffect(() => {
         dispatch({type: "FETCH_IMAGES"});
@@ -19,14 +17,12 @@ function App() {
         <div>
             <Header/>
             <Routes>
-                {/*<Route path="/gallery-project" element={ <Gallery/>}/>*/}
-                <Route path="/aboutMe" element={ <AboutMe/> }/>
-                <Route path="/imgInfo/:id" element={ <ImgInfo/> }/>
-                <Route path="/" element={ <Gallery/>}/>
+                <Route path="/gallery-project" element={<Gallery/>}/>
+                <Route path="/aboutMe" element={<AboutMe/>}/>
+                <Route path="/imgInfo/:id" element={<ImgInfo/>}/>
+                <Route path="/" element={<Gallery/>}/>
             </Routes>
-            {isLoading ?
-                <Preloader/>
-                : null}
+            <Preloader/>
         </div>
     );
 }
